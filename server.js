@@ -49,6 +49,13 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	res.render('projects', {
+		pageTitle: 'Projects Page',
+		message: "This is my portfolio!"
+	});
+});
+
 app.get('/bad', function(req, res){
 	res.send({
 		errorMessage: "Error handling this request"
